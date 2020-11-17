@@ -26,5 +26,14 @@ describe 'Bowling Game' do
     20.times{game.roll(0)}
     expect(game.score).to eq(16)
   end
-  
+
+  it ('Can roll a strike') do
+    game = Bowling.new
+    game.roll(10)
+    game.roll(3)
+    game.roll(4)
+    16.times{game.roll(0)}
+    expect(game.score).to eq(24)
+  end
+
 end
