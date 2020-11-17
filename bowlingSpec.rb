@@ -12,4 +12,10 @@ describe 'Bowling Game' do
     expect(game.score).to eq(0)
   end
 
+  it ('Can have a game where each roll was 1') do
+    game = Bowling.new
+    20.times{game.roll(1)}
+    expect(game.score).to eq(20)
+  end
+
 end
