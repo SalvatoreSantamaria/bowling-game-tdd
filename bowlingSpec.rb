@@ -36,4 +36,10 @@ describe 'Bowling Game' do
     expect(game.score).to eq(24)
   end
 
+  it ('Can have a game with the score of 300') do
+    game = Bowling.new
+    12.times{game.roll(10)}
+    expect(game.score).to eq(300)
+  end
+
 end
